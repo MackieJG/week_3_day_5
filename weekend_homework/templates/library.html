@@ -1,0 +1,36 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<div class="library_title">
+    <h2>Thistle's Library</h2>
+</div>
+<div class="library_container">
+        <ul>
+            {% for book in library %}
+            <li>
+                <div class="borders">
+                    <h3>Title</h3>
+                    <p>{{ book.title }}</p>
+                    <a href="/library/{{ loop.index0 }}">View Book</a>
+                    <h3>Author</h3>
+                    <p>{{ book.author }}</p>
+                    <h3>Genre</h3>
+                    <p>{{ book.genre }}</p>
+                    <h3>Checked Out</h3>
+                    <p>
+                        {% if book.checked_out %}
+                            Currently out of stock
+                        {% else %} 
+                        <input type="submit" value="checkout">
+                        {% endif %}
+                    </p>
+                    <form class="form-inline" action="/library/remove/{{ book.title }}" method="POST">
+                        <input type="submit" value="Remove book from library">
+                    </form>
+                </div> 
+            </li>            
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

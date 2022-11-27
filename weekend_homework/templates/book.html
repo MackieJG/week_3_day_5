@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="individual_book_style">
+    <h3>Title</h3>
+    <p>{{ book.title }}</p>
+    <h3>Author</h3>
+    <p>{{ book.author }}</p>
+    <h3>Genre</h3>
+    <p>{{ book.genre }}</p>
+    <h3>Checked Out</h3>
+    <p>
+        {% if book.checked_out %}
+                Currently out of stock
+            {% else %} 
+                Current In stock
+            {% endif %}
+    </p>
+</div>
+{% endblock %}

@@ -1,0 +1,105 @@
+/* main.css will cover all styling for the 5 html docs */
+
+body {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(207, 190, 160);
+    
+}
+
+/* The next section will cover base.html */
+
+.header_style{
+    display: flex;
+    background-color: rgb(200, 142, 35);
+    align-items:center;
+    padding: 2%;
+    justify-content:space-between
+
+}
+.header_nav ul{
+   list-style-type: none;
+}
+.header_nav ul li a{
+    color: rgb(9, 9, 9);
+    display: flex;
+    align-content:space-around;
+    gap: 10px;
+}
+
+.footer_style{
+    display: flex;
+    background-color: rgb(200, 142, 35);
+    align-items:center;
+    padding: 2%;
+    justify-content:space-between
+}
+
+.footer_nav ul li{
+    list-style-type: none;
+}
+
+.footer_nav ul li a{
+    color: rgb(9, 9, 9);
+    display: flex;
+    align-content:space-between;
+}
+
+/* This section will cover the library.html */
+
+.library_title{
+    display: flex;
+    justify-content: center;
+}
+
+.library_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    flex-direction:row;
+
+}
+.library_container ul{
+    list-style: none;
+}
+.borders{
+    border: 5px;
+    border-style: double;
+    padding: 5px;
+}
+
+/* this section will cover book.html */
+.individual_book_style{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-style: double;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    gap: 2px;
+}
+
+/* this section will cover index.html */
+
+.index_style{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+.index_style p{
+    flex-grow: 1;
+    flex-basis: 100px;
+    font-size: large;
+}
+
+/* this section will cover new_book.html */
+.new_book_style{
+   justify-content: center;
+}
+.form_style form{
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    border-style: double;
+}
